@@ -47,7 +47,7 @@ module RubyCards
     #
     # @return [Integer] The combined weights of the cards in the hand
     def sum
-      @cards.reduce { |memo, card| memo + card.to_i }
+      @cards.reduce(0) { |memo, card| memo + card.to_i }.to_i
     end
 
     # Returns an enumator over the hand
